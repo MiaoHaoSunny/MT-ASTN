@@ -186,10 +186,10 @@ for epoch in range(n_epoch):
         flow_private_loss = loss_discriminator(flow_private_domain_label, flow_domain_true_label)
         # torch.cuda.empty_cache()
         # print(flow_private_feature.shape, flow_shared_feature.shape)
-        # flow_diff_loss = loss_diff(flow_private_feature, flow_shared_feature)
+        flow_diff_loss = loss_diff(flow_private_feature, flow_shared_feature)
 
-        # flow_loss = flow_task_loss + flow_shared_loss + flow_private_loss + flow_diff_loss
-        flow_loss = flow_task_loss + 1*(flow_shared_loss + flow_private_loss)
+        flow_loss = flow_task_loss + flow_shared_loss + flow_private_loss + flow_diff_loss
+        # flow_loss = flow_task_loss + 1*(flow_shared_loss + flow_private_loss)
         flow_train_average_MSE += flow_task_loss.item()
         # print('Flow loss cal over')
 
@@ -207,10 +207,10 @@ for epoch in range(n_epoch):
         od_task_loss = loss_task(od_out, od_label.permute(0, 1, 4, 2, 3))
         od_shared_loss = loss_discriminator(od_domain_label, od_domain_true_label)
         od_private_loss = loss_discriminator(od_private_domain_label, od_domain_true_label)
-        # od_diff_loss = loss_diff(od_private_feature, od_shared_feature)
+        od_diff_loss = loss_diff(od_private_feature, od_shared_feature)
 
-        # od_loss = od_task_loss + od_shared_loss + od_private_loss + od_diff_loss
-        od_loss = 1*od_task_loss + od_shared_loss + od_private_loss
+        od_loss = od_task_loss + od_shared_loss + od_private_loss + od_diff_loss
+        # od_loss = 1*od_task_loss + od_shared_loss + od_private_loss
         od_train_average_MSE += od_task_loss.item()
         # print('OD loss cal over')
         optimizer.zero_grad()
