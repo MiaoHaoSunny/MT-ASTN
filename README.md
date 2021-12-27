@@ -12,7 +12,7 @@ A simple version of Pytorch implementation of [Multi-task Adversarial Spatial-Te
 Numpy
 scipy
 Python 3.6+
-Pytorch 1.0+
+Pytorch 1.0
 Matplotlib(Optional)
 ```
 
