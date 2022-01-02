@@ -32,5 +32,5 @@ Please cite the following paper if you use this repository in your reseach.
 The code might be a little messy. For any question, feel free to contact:
 ```
 Hao Miao: haomiao96@gmail.com
-Senzhang Wang: szwang@nuaa.edu.cn
+Senzhang Wang: szwang@csu.edu.cn
 ```
