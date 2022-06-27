@@ -31,6 +31,6 @@ Please cite the following paper if you use this repository in your reseach.
 ## Contact
 The code might be a little messy. For any question, feel free to contact:
 ```
-Hao Miao: haomiao96@gmail.com
+Hao Miao: haom@cs.aau.dk
 Senzhang Wang: szwang@csu.edu.cn
 ```
